@@ -1,9 +1,14 @@
 import "./App.css";
+// import DaisyNav from "./components/daisyNav/DaisyNav";
+import Navbar from "./components/navbar/Navbar";
+import PriceOptions from "./components/priceOptions/PriceOptions";
 
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+    {/* <DaisyNav></DaisyNav> */}
+      <Navbar></Navbar>
+      <PriceOptions></PriceOptions>
     </>
   );
 }
