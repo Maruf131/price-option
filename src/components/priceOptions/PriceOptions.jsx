@@ -1,7 +1,8 @@
+
 import PriceOption from "../priceOption/PriceOption";
 
 const PriceOptions = () => {
-    [
+  const priceOptions = [
   {
     "id": 1,
     "name": "Basic Plan",
@@ -83,14 +84,18 @@ const PriceOptions = () => {
   }
 ]
 
-    return (
-        <div>
-            <h2 className="text-4xl font-bold text-center mt-5">Best Prices in the Town</h2>
-            {
-                PriceOptions.map(option => <PriceOption key={option.id} option ={option}></PriceOption>)
-            }
-        </div>
-    );
-};
 
+  return (
+    <div>
+      <h2 className="text-4xl font-bold text-center mt-5">
+        Best Prices in the Town
+      </h2>
+      <div className="grid md:grid-cols-3 gap-10 my-10 mx-10">
+        {priceOptions.map((option) => (
+          <PriceOption key={option.id} option={option}></PriceOption>
+        ))}
+      </div>
+    </div>
+  );
+};
 export default PriceOptions;
