@@ -12,16 +12,16 @@ const Navbar = () => {
     { id: 5, name: "Contact", path: "/contact" },
   ];
   return (
-    <nav className="bg-black shadow-2xl shadow-gray-700">
+    <nav className="bg-black/30 backdrop-blur-xl shadow-2xl shadow-gray-700 sticky top-0 z-50">
         <div onClick={()=>setOpen(!open)} className="md:hidden p-6">
             {
                 open === true ? 
-                <GoX className="text-2xl font bold text-yellow-500"></GoX>
-                : <LuMenu className="text-2xl font-bold  text-yellow-500"></LuMenu>
+                <GoX className="text-2xl font bold text-orange-600"></GoX>
+                : <LuMenu className="text-2xl font-bold  text-orange-600"></LuMenu>
             }
             
         </div>
-        <ul className={`md:flex md:static md:justify-center px-10 p-6 absolute duration-1000 ${open ? 'top-14' : '-top-60'}`}>
+        <ul className={`md:flex md:static md:justify-center md:bg-black bg-black/30 backdrop-blur-xl px-10 p-6 absolute duration-1000 ${open ? 'top-14' : '-top-60'}`}>
             {
                 routes.map(route => <Link key={route.id} route ={route}></Link>)
             }
